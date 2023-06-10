@@ -22,7 +22,39 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
         ),
       ),
       body: Column(
-        children: [Image.asset('images/einstein.jpeg')],
+        children: [
+          Image.asset('images/einstein.jpeg'),
+          const SizedBox(
+            height: 10,
+          ),
+          const Divider(
+            color: Colors.black,
+          ),
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
+            color: Colors.blueGrey,
+            width: double.infinity,
+            child: const Center(
+              child: Text(
+                'This is Text Widget',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              debugPrint('Elevated Button');
+            },
+            child: const Text('Elevated Button'),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              debugPrint('Outlined Button Button');
+            },
+            child: const Text('Outlined Button Button'),
+          ),
+        ],
       ),
     );
   }
